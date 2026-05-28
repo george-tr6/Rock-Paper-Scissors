@@ -4,8 +4,8 @@ console.log("Hello World");
 
 function getComputerChoice() {
 
-    let randomnumber = Math.random() * 10;
-    let computerchoice = Number(randomnumber);
+    const randomnumber = Math.random() * 10;
+    const computerchoice = Number(randomnumber);
     let label;
 
     if (computerchoice <= 3.333) {
@@ -21,10 +21,17 @@ function getComputerChoice() {
         label = "Scissors";
     };
 
-    finalchoice = label.toLocaleLowerCase();
+    const finalchoice = label.toLocaleLowerCase();
     return finalchoice;
 }
 
+
+function getHumanChoice() {
+    
+    const initialinput = prompt("Make your pick", "Rock, Paper, Scissors");
+    const userinput = initialinput.toLocaleLowerCase();
+    return userinput;
+}
 
 //Write the logic to get the human choice
 
