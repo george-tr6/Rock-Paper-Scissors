@@ -1,5 +1,10 @@
 console.log("Hello World");
 
+//Declare the players score variables
+
+let humanScore = 0;
+let computerScore = 0;
+
 //Write the logic to get the computer choice
 
 function getComputerChoice() {
@@ -25,7 +30,7 @@ function getComputerChoice() {
     return finalchoice;
 }
 
-
+//Write the logic to get the human choice
 function getHumanChoice() {
     
     const initialinput = prompt("Make your pick", "Rock, Paper, Scissors");
@@ -33,10 +38,17 @@ function getHumanChoice() {
     return userinput;
 }
 
-//Write the logic to get the human choice
-
-//Declare the players score variables
 
 //Write the logic to play a single round
+
+function playRound(humanChoice, computerChoice) {
+
+}
+
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
 
 //Write the logic to play the entire game
