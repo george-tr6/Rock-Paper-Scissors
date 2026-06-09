@@ -43,6 +43,36 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
 
+    let result;
+
+    if (humanChoice === "rock" && computerChoice === "rock") {
+        result = "tie"
+        console.log(result);
+    } else if (humanChoice === "paper" && computerChoice === "paper") {
+        result = "tie"
+        console.log(result);
+    } else if (humanChoice === "scissors" && computerChoice === "scissors") {
+        result = "tie"
+        console.log(result);
+    } else if (humanChoice === "rock" && computerChoice === "scissors") {
+        result = "You win! Rock beats Scissors"
+        console.log(result);
+    } else if (humanChoice === "paper" && computerChoice === "rock") {
+        result = "You win! Paper beats Rock"
+        console.log(result);
+    } else if (humanChoice === "scissors" && computerChoice === "paper") {
+        result = "You win! Scissors beats Paper"
+        console.log(result);
+    } else if (humanChoice === "rock" && computerChoice === "paper") {
+        result = "Sorry, you did not win! Paper beats Rock"
+        console.log(result);
+    } else if (humanChoice === "paper" && computerChoice === "scissors") {
+        result = "Sorry, you did not win! Scissors beats Paper"
+        console.log(result);
+    } else if (humanChoice === "scissors" && computerChoice === "rock") {
+        result = "Sorry, you did not win! Rock beats Scissors"
+        console.log(result);
+    }
 }
 
 
