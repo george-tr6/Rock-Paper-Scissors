@@ -1,8 +1,5 @@
 console.log("Hello World");
 
-//Declare the players score variables
-
-
 //Write the logic to get the computer choice
 
 function getComputerChoice() {
@@ -36,15 +33,16 @@ function getHumanChoice() {
     return userinput;
 }
 
-//Write the logic to play a single round
 
 //Write the logic to play the entire game
 
 function playGame() {
 
+    //Declare the players score variables
     let humanScore = 0;
     let computerScore = 0;
 
+    //The logic to play a single round
     function playRound(humanChoice, computerChoice) {
 
     let result;
@@ -91,40 +89,14 @@ function playGame() {
     }
 }
 
-    //Round 1
-    let humanSelection = getHumanChoice();
-    let computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log(humanScore);
-    console.log(computerScore);
+    for (let i = 0; i < 5; i++) {
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+        console.log(humanScore);
+        console.log(computerScore);
 
-    //Round 2
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log(humanScore);
-    console.log(computerScore);
-
-    //Round 3
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log(humanScore);
-    console.log(computerScore);
-
-    //Round 4
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log(humanScore);
-    console.log(computerScore);
-
-    //Round 5
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log(humanScore);
-    console.log(computerScore);
+    }
 
     if (humanScore > computerScore ) {
         console.log("You won");
@@ -134,3 +106,5 @@ function playGame() {
         console.log("It's a tie");
     }
 }
+
+playGame();
